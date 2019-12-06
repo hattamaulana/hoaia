@@ -22,7 +22,7 @@
                         <ul class="nav navbar-nav menu_nav ml-5 pl-lg-5 mr-auto">
                             <li class="nav-item active"><a class="nav-link" href="index.html">Hutan</a></li>
                             <li class="nav-item"><a class="nav-link" href="about-us.html">Donasi</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Visi Misi</a></li>
                         </ul>
 
                         <div class="nav navbar-nav menu_nav">
