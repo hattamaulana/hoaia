@@ -1,4 +1,4 @@
-@extends( 'master' )
+@extends( 'layouts.master-1' )
 
 @section('title')
     Hoaia
@@ -35,7 +35,6 @@
                                 very fill agenc to. Dry creepeth subdue them kind night behold
                                 rule stars him grass waters our without
                             </p>
-                            <a href="#" class="primary_btn">Learn more</a>
                         </div>
                     </div>
                 </div>
@@ -44,20 +43,5 @@
     </section>
     <!--================ End About Us Area =================-->
 
-    <!--================ Start Subscribe Area =================-->
-    <div class="container">
-        <div class="subscribe_area">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="d-flex align-items-center">
-                        <h1 class="text-white mr-auto">Do you have a question?</h1>
-                        <div id="mc_embed_signup ml-auto">
-                            <button class="ml-10 primary_btn yellow_btn btn sub-btn rounded">PESAN</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--================ End Subscribe Area =================-->
+    @include( 'components.content.message' )
 @endsection

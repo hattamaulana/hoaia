@@ -5,7 +5,7 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.html">
+                    <a class="navbar-brand logo_h" href="/">
                         <img src="{{ asset( 'vendor/seelife/img/logo.png' ) }}" alt="">
                     </a>
 
@@ -20,9 +20,17 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-5 pl-lg-5 mr-auto">
-                            <li class="nav-item active"><a class="nav-link" href="index.html">Hutan</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about-us.html">Donasi</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Visi Misi</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route( 'user.forest' ) }}">Hutan</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route( 'user.donation' ) }}">Donasi</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route( 'user.visiAndMission' ) }}">Visi Misi</a>
+                            </li>
                         </ul>
 
                         <div class="nav navbar-nav menu_nav">
