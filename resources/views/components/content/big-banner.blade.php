@@ -5,7 +5,7 @@
             <div class="banner_content">
                 <p class="upper_text">Ulurkan Tanganmu</p>
                 <h2>Untuk membuat Bumi lebih Hijau</h2>
-                <a class="primary_btn mr-20" href="#">
+                <a class="primary_btn mr-20" href="{{ route( 'user.donation' ) }}">
                     DONASI
                 </a>
             </div>
