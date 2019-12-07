@@ -6,7 +6,7 @@
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <a class="navbar-brand logo_h" href="/">
-                        <img src="{{ asset( 'vendor/seelife/img/logo.png' ) }}" alt="">
+                        <img src="{{ $brand }}" alt="">
                     </a>
 
                     <button class="navbar-toggler" type="button"
@@ -20,22 +20,22 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-5 pl-lg-5 mr-auto">
-                            <li class="nav-item">
+                            <li class="nav-item {{ $slot }}">
                                 <a class="nav-link" href="{{ route( 'user.forest' ) }}">Hutan</a>
                             </li>
 
-                            <li class="nav-item">
+                            <li class="nav-item {{ $slot }}">
                                 <a class="nav-link" href="{{ route( 'user.donation' ) }}">Donasi</a>
                             </li>
 
-                            <li class="nav-item">
+                            <li class="nav-item {{ $slot }}">
                                 <a class="nav-link" href="{{ route( 'user.visiAndMission' ) }}">Visi Misi</a>
                             </li>
                         </ul>
 
                         <div class="nav navbar-nav menu_nav">
-                            <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                            <li class="nav-item {{ $slot }}"><a class="nav-link" href="/register">Register</a></li>
+                            <li class="nav-item {{ $slot }}"><a class="nav-link" href="/login">Login</a></li>
                         </div>
                     </div>
                 </div>

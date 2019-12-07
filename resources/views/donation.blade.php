@@ -1,10 +1,14 @@
-@extends( 'layouts.master-2' )
+@extends( 'layouts.app' )
 
-@section('title')
-    Hoaia
+@section('brand')
+    {{ asset( 'vendor/seelife/img/logo.png' ) }}
 @endsection
 
+@section('nav-link', 'nav-item-light')
+
 @section('content')
+    @component('components.home-banner', ['shown' => 'parralax-banner'])
+    @endcomponent
     @include( 'components.content.hutan-banner' )
 
     <section class="features_causes">

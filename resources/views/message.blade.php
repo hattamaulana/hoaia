@@ -1,8 +1,10 @@
-@extends( 'layouts.master-2' )
+@extends( 'layouts.app' )
 
-@section( 'title' )
-    Visi & Misi | Hoaia
+@section('brand')
+    {{ asset( 'vendor/seelife/img/logo.png' ) }}
 @endsection
+
+@section('nav-link', 'nav-item-dark')
 
 @section( 'content' )
     <!--================Contact Area =================-->

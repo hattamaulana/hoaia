@@ -1,11 +1,15 @@
-@extends( 'layouts.master-1' )
+@extends( 'layouts.app' )
 
-@section('title')
-    Hoaia
+@section('brand')
+    {{ asset( 'vendor/seelife/img/logo.png' ) }}
 @endsection
 
+@section('nav-link', 'nav-item-light')
+
 @section('content')
-    @include( 'components.content.big-banner' )
+    @component('components.home-banner', ['shown' => 'big-banner'])
+    @endcomponent
+
     @include( 'components.content.hutan-banner' )
 
     <!--================ Start About Us Area =================-->

@@ -198,13 +198,18 @@ button:focus {
         font-weight: 500;
         line-height: 80px;
         text-transform: uppercase;
-        color: #ffffff;
         padding: 0px;
         display: inline-block; }
         .header_area .navbar .nav .nav-item .nav-link:after {
           display: none; }
-      .header_area .navbar .nav .nav-item:hover .nav-link, .header_area .navbar .nav .nav-item.active .nav-link {
-        color: #60bc0f; }
+        .header_area .navbar .nav .nav-item-light .nav-link {
+            color: #fff;}
+        .header_area .navbar .nav .nav-item-light:hover .nav-link {
+            color: #60bc0f;}
+        .header_area .navbar .nav .nav-item-dark .nav-link {
+            color: #aaa;}
+        .header_area .navbar .nav .nav-item-dark:hover .nav-link {
+            color: #60bc0f;}
       .header_area .navbar .nav .nav-item.submenu {
         position: relative; }
         .header_area .navbar .nav .nav-item.submenu ul {

@@ -1,11 +1,12 @@
-@extends( 'layouts.master-2' )
+@extends( 'layouts.app' )
 
-@section( 'title' )
-    Visi & Misi | Hoaia
+@section('brand')
+    {{ asset( 'vendor/seelife/img/logo.png' ) }}
 @endsection
 
+@section('nav-link', 'nav-item-dark')
+
 @section( 'content' )
-    <!--================Contact Area =================-->
     <section class="contact_area section_gap">
         <div class="container">
             <div id="mapBox" class="mapBox"
@@ -62,7 +63,6 @@
             </div>
         </div>
     </section>
-    <!--================Contact Area =================-->
 
     @include( 'components.content.message' )
 @endsection
