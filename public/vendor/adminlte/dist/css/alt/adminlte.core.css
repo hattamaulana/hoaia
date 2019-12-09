@@ -4722,12 +4722,12 @@ a.badge:hover, a.badge:focus {
 
 .badge-primary {
   color: #ffffff;
-  background-color: #007bff;
+  background-color: #5ebe38;
 }
 
 a.badge-primary:hover, a.badge-primary:focus {
   color: #ffffff;
-  background-color: #0062cc;
+  background-color: #5ebe38;
 }
 
 a.badge-primary:focus, a.badge-primary.focus {
