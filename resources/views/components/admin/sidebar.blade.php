@@ -23,14 +23,16 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">
+                    <a href="{{ route('admin.root') }}"
+                       class="nav-link {{ ($slot == 'dashboard') ? 'active': '' }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
 
                 <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                    <a href="#"
+                       class="nav-link {{ ($slot == 'forest') ? 'active': '' }}">
                         <i class="nav-icon fas fa-air-freshener"></i>
                         <p>
                             Hutan
@@ -39,7 +41,8 @@
                 </li>
 
                 <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('admin.donation') }}"
+                       class="nav-link {{ ($slot == 'donation') ? 'active': '' }}">
                         <i class="nav-icon fas fa-archive"></i>
                         <p>
                             Donasi
@@ -48,7 +51,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#"
+                       class="nav-link {{ ($slot == 'message') ? 'active': '' }}">
                         <i class="nav-icon far fa-envelope"></i>
                         <p>Pesan</p>
                     </a>
@@ -56,14 +60,16 @@
 
                 <li class="nav-header">Konfirmasi</li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#"
+                       class="nav-link {{ ($slot == 'volunteer') ? 'active': '' }}">
                         <i class="nav-icon fas fa-user-alt"></i>
                         <p>Volunteer</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#"
+                       class="nav-link {{ ($slot == 'pay-donation') ? 'active': '' }}">
                         <i class="nav-icon fas fa-money-bill-alt"></i>
                         <p>Sumbangan</p>
                     </a>

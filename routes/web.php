@@ -56,6 +56,9 @@ Route::group(['namespace' => 'User'], function () {
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['namespace' => 'Admin'], function () {
-    Route::get('/admin', 'RootController@index');
+Route::group(['namespace' => 'Admin', 'prefix' => '/admin'], function () {
+    Route::get('/', 'RootController@index')
+        ->name('admin.root');
+    Route::get('/donation', 'DonationController@index')
+        ->name('admin.donation');
 });

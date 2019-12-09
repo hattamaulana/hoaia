@@ -32,9 +32,10 @@
     <body class="hold-transition sidebar-mini layout-fixed">
         <div class="wrapper">
             @include('components.admin.navbar')
-            @include('components.admin.sidebar')
+            @component('components.admin.sidebar')
+                @yield('sidebar-active')
+            @endcomponent
 
-            <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
                 @component('components.admin.content.header')
                     @slot('title')
@@ -44,19 +45,13 @@
                     @yield('breadcumb')
                 @endcomponent
 
-                <!-- Main content -->
                 <section class="content">
                     <div class="container-fluid">
-                        <!-- Main row -->
-                        <div class="row">
-                            @yield('content')
-                        </div>
-                        <!-- /.row (main row) -->
-                    </div><!-- /.container-fluid -->
+                        @yield('content')
+                    </div>
                 </section>
-                <!-- /.content -->
             </div>
-            <!-- /.content-wrapper -->
+
             <footer class="main-footer">
                 <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
                 All rights reserved.

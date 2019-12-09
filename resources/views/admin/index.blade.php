@@ -1,17 +1,20 @@
 @extends('layouts.app-admin')
 
+
+@section('sidebar-active', 'dashboard')
 @section('title', 'Dashboard')
 @section('breadcumb')
     @component('components.admin.content.breadcumb', ['data' => [
-            ['/' => 'Home'],
+            ['/admin' => 'Admin'],
             ['#' => 'Dashboard']
         ]])
     @endcomponent
 @endsection
 
 @section('content')
-    <!-- Left col -->
-    <section class="col-lg-7 connectedSortable">
+    <div class="row">
+        <!-- Left col -->
+        <section class="col-lg-7 connectedSortable">
         <!-- Show Date Time -->
         <div class="card">
             <div class="card-header">
@@ -122,10 +125,9 @@
             </div>
         </div>
     </section>
-    <!-- /.Left col -->
 
-    <!-- right col (We are only adding the ID to make the widgets sortable)-->
-    <section class="col-lg-5 connectedSortable">
+        <!-- right col -->
+        <section class="col-lg-5 connectedSortable">
         <!-- AREA CHART -->
         <div class="card">
             <div class="card-header">
@@ -159,7 +161,7 @@
         </div>
         <!-- /Donut Chart -->
     </section>
-    <!-- right col -->
+    </div>
 @endsection
 
 @section('chartjs')
