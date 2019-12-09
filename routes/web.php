@@ -59,6 +59,13 @@ Route::group(['namespace' => 'User'], function () {
 Route::group(['namespace' => 'Admin', 'prefix' => '/admin'], function () {
     Route::get('/', 'RootController@index')
         ->name('admin.root');
+
     Route::get('/donation', 'DonationController@index')
         ->name('admin.donation');
+
+    Route::get('/hutan', 'ForestController@index')
+        ->name('admin.forest');
+
+    Route::get('/message', 'MessageController@index')
+        ->name('admin.message');
 });

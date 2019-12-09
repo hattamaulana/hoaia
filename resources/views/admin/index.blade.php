@@ -80,50 +80,52 @@
         <!-- /.Show Date Time-->
 
         <!-- DIRECT CHAT -->
-        <div class="card direct-chat direct-chat-primary">
-            <div class="card-header">
-                <h3 class="card-title">Direct Chat</h3>
-
-                <div class="card-tools">
-                    <button type="button" class="btn btn-tool">
-                        <i class="fas fa-comments"></i>
-                    </button>
-                    <span data-toggle="tooltip" title="3 New Messages" class="badge badge-primary">3</span>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Pesan</h3>
                 </div>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-                <!-- Contacts are loaded here -->
-                <div class="direct-chat-messages">
-                    <ul class="contacts-list">
-                        <li>
-                            <a href="#">
-                                <img class="contacts-list-img"
-                                     src="{{ asset('vendor/adminlte/dist/img/user1-128x128.jpg') }}">
-                                <div class="contacts-list-info">
-                          <span class="contacts-list-name text-black-50">
-                            Count Dracula
-                            <small class="contacts-list-date float-right">2/28/2015</small>
-                          </span>
-                                    <span class="contacts-list-msg">How have you been? I was...</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card-footer">
-                <form action="#" method="post">
-                    <div class="input-group">
-                        <input type="text" name="message" placeholder="Type Message ..." class="form-control">
-                        <span class="input-group-append">
-                      <button type="button" class="btn btn-primary">Send</button>
-                    </span>
+                <!-- /.card-header -->
+                <div class="card-body p-0">
+                    <div class="table-responsive mailbox-messages">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nama Pengirim</th>
+                                <th>Pesan</th>
+                                <th>Waktu</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
+                                </td>
+                                <td class="mailbox-date">5 mins ago</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <!-- /.table -->
                     </div>
-                </form>
+                    <!-- /.mail-box-messages -->
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer p-0">
+                    <div class="mailbox-controls">
+                        <button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
+                        <div class="float-right">
+                            1-50/200
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <!-- /.btn-group -->
+                        </div>
+                        <!-- /.float-right -->
+                    </div>
+                </div>
             </div>
-        </div>
     </section>
 
         <!-- right col -->
