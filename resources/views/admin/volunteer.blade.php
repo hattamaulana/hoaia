@@ -1,12 +1,12 @@
 @extends('layouts.app-admin')
 
 
-@section('sidebar-active', 'forest')
-@section('title', 'Hutan')
+@section('sidebar-active', 'volunteer')
+@section('title', 'Relawan')
 @section('breadcumb')
     @component('components.admin.content.breadcumb', ['data' => [
             ['/admin' => 'Admin'],
-            ['#' => 'Hutan']
+            ['#' => 'Relawan']
         ]])
     @endcomponent
 @endsection
@@ -18,12 +18,8 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3>
-                                <a class="btn btn-tool bg-success"
-                                   href="{{ route('admin.forest.add') }}" >
-                                    <i class="fas fa-plus"></i>
-                                    Tambah data
-                                </a>
+                            <h3 class="card-title">
+                                Data Request Menjadi Relawan
                             </h3>
                         </div>
                         <!-- /.card-header -->
@@ -32,34 +28,38 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Nama Hutan</th>
-                                    <th>Deskripsi</th>
-                                    <th>Edit</th>
-                                    <th>Hapus</th>
+                                    <th>Nama User</th>
+                                    <th>Email</th>
+                                    <th>Tanggal Pendaftaran </th>
+                                    <th></th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>Alas Purwo</td>
-                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                    <td>Mahatta Maulana</td>
+                                    <td>mahatta.maulana@gmail.com</td>
+                                    <td>10 September 2013</td>
                                     <td>
-                                        <a class="btn btn-tool bg-warning"
-                                           href="{{ route('admin.forest.edit', 1) }}">
-                                            <i class="fas fa-edit"></i>
+                                        <a class="btn btn-success"
+                                           href="">
+                                            Terima Sebagai Relawan
                                         </a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-tool bg-danger"
-                                           href="{{ route('admin.forest.destroy', 1) }}">
-                                            <i class="fas fa-minus"></i>
+                                        <a class="btn btn-danger"
+                                           href="">
+                                            Tolak Sebagai Relawan
                                         </a>
                                     </td>
                                 </tr>
                                 </tbody>
                             </table>
                         </div>
+                        <!-- /.card-body -->
                     </div>
+                    <!-- /.card -->
                 </div>
             </div>
         </div>

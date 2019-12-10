@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class DonationController extends Controller
+class VolunteerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class DonationController extends Controller
      */
     public function index()
     {
-        return view('admin.donation');
+        return view('admin.volunteer');
     }
 
     /**
@@ -24,7 +24,7 @@ class DonationController extends Controller
      */
     public function create()
     {
-        return view('admin.form.form-donation');
+        //
     }
 
     /**
@@ -57,7 +57,7 @@ class DonationController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.form.edit-donation');
+        //
     }
 
     /**

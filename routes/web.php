@@ -60,12 +60,34 @@ Route::group(['namespace' => 'Admin', 'prefix' => '/admin'], function () {
     Route::get('/', 'RootController@index')
         ->name('admin.root');
 
-    Route::get('/donation', 'DonationController@index')
-        ->name('admin.donation');
-
     Route::get('/hutan', 'ForestController@index')
         ->name('admin.forest');
+    Route::get('/hutan/add', 'ForestController@create')
+        ->name('admin.forest.add');
+    Route::get('/hutan/edit/{id}', 'ForestController@edit')
+        ->name('admin.forest.edit');
+    Route::get('/hutan/hapus/{id}', 'ForestController@destroy')
+        ->name('admin.forest.destroy');
+
+    Route::get('/donation', 'DonationController@index')
+        ->name('admin.donation');
+    Route::get('/donation/add', 'DonationController@create')
+        ->name('admin.donation.add');
+    Route::get('/donation/edit/{id}', 'DonationController@edit')
+        ->name('admin.donation.edit');
+    Route::get('/donation/hapus/{id}', 'DonationController@edit')
+        ->name('admin.donation.destroy');
 
     Route::get('/message', 'MessageController@index')
         ->name('admin.message');
+    Route::get('/message/{id}', 'MessageController@show')
+        ->name('admin.message.detail');
+    Route::get('/message/{id}/replay', 'MessageController@create')
+        ->name('admin.message.replay');
+
+    Route::get('/volunteer', 'VolunteerController@index')
+        ->name('admin.volunteer');
+
+    Route::get('/sumbangan', 'EndowmentController@index')
+        ->name('admin.endowment');
 });

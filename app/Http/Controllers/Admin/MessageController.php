@@ -22,9 +22,9 @@ class MessageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        return view('admin.message-replay');
     }
 
     /**
@@ -46,7 +46,7 @@ class MessageController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('admin.message-detail');
     }
 
     /**

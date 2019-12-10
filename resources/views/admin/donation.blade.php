@@ -19,8 +19,8 @@
                 <div class="card">
                     <div class="card-header">
                         <h3>
-                            <a class="btn btn-tool bg-primary"
-                               href="" >
+                            <a class="btn btn-tool bg-success"
+                               href="{{ route('admin.donation.add') }}" >
                                 <i class="fas fa-plus"></i>
                                 Tambah data
                             </a>
@@ -49,13 +49,13 @@
                                 <td>Rp 1.000.000.000</td>
                                 <td>
                                     <a class="btn btn-tool bg-warning"
-                                       href="">
+                                       href="{{ route('admin.donation.edit', 1) }}">
                                         <i class="fas fa-edit"></i>
                                     </a>
                                 </td>
                                 <td>
                                     <a class="btn btn-tool bg-danger"
-                                       href="">
+                                       href="{{ route('admin.donation.destroy', 1) }}">
                                         <i class="fas fa-minus"></i>
                                     </a>
                                 </td>

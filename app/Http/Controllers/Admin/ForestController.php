@@ -24,7 +24,7 @@ class ForestController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.form.form-forest');
     }
 
     /**
@@ -57,7 +57,7 @@ class ForestController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.form.edit-forest');
     }
 
     /**

@@ -24,7 +24,7 @@
                      with font-awesome or any other icon font library -->
                 <li class="nav-item">
                     <a href="{{ route('admin.root') }}"
-                       class="nav-link {{ ($slot == 'dashboard') ? 'active': '' }}">
+                       class="nav-link {{ ($slot == 'dashboard') ? 'active bg-success': '' }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>Dashboard</p>
                     </a>
@@ -32,7 +32,7 @@
 
                 <li class="nav-item has-treeview">
                     <a href="{{ route('admin.forest') }}"
-                       class="nav-link {{ ($slot == 'forest') ? 'active': '' }}">
+                       class="nav-link {{ ($slot == 'forest') ? 'active bg-success': '' }}">
                         <i class="nav-icon fas fa-air-freshener"></i>
                         <p>
                             Hutan
@@ -42,7 +42,7 @@
 
                 <li class="nav-item has-treeview">
                     <a href="{{ route('admin.donation') }}"
-                       class="nav-link {{ ($slot == 'donation') ? 'active': '' }}">
+                       class="nav-link {{ ($slot == 'donation') ? 'active bg-success': '' }}">
                         <i class="nav-icon fas fa-archive"></i>
                         <p>
                             Donasi
@@ -52,7 +52,7 @@
 
                 <li class="nav-item">
                     <a href="{{ route('admin.message') }}"
-                       class="nav-link {{ ($slot == 'message') ? 'active': '' }}">
+                       class="nav-link {{ ($slot == 'message') ? 'active bg-success': '' }}">
                         <i class="nav-icon far fa-envelope"></i>
                         <p>Pesan</p>
                     </a>
@@ -60,16 +60,16 @@
 
                 <li class="nav-header">Konfirmasi</li>
                 <li class="nav-item">
-                    <a href="#"
-                       class="nav-link {{ ($slot == 'volunteer') ? 'active': '' }}">
+                    <a href="{{ route('admin.volunteer') }}"
+                       class="nav-link {{ ($slot == 'volunteer') ? 'active bg-success': '' }}">
                         <i class="nav-icon fas fa-user-alt"></i>
-                        <p>Volunteer</p>
+                        <p>Relawan</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#"
-                       class="nav-link {{ ($slot == 'pay-donation') ? 'active': '' }}">
+                    <a href="{{ route('admin.endowment') }}"
+                       class="nav-link {{ ($slot == 'endowment') ? 'active bg-success': '' }}">
                         <i class="nav-icon fas fa-money-bill-alt"></i>
                         <p>Sumbangan</p>
                     </a>
