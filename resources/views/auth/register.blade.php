@@ -14,6 +14,8 @@
                 <div class="signup-form">
                     <h2 class="form-title">Sign up</h2>
                     <form method="POST" class="register-form" id="register-form" action="{{ route('register') }}">
+                        @csrf
+
                         <div class="form-group">
                             <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                             <input type="text" name="name" id="name" placeholder="Your Name"
@@ -22,8 +24,8 @@
 
                             @error('name')
                             <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <strong>{{ $message }}</strong>
+                            </span>
                             @enderror
                         </div>
 
@@ -35,8 +37,8 @@
 
                             @error('email')
                             <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <strong>{{ $message }}</strong>
+                            </span>
                             @enderror
                         </div>
 
@@ -48,8 +50,8 @@
 
                             @error('password')
                             <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <strong>{{ $message }}</strong>
+                            </span>
                             @enderror
                         </div>
 
@@ -60,7 +62,7 @@
                         </div>
 
                         <div class="form-group form-button">
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-success">
                                 {{ __('Register') }}
                             </button>
                         </div>

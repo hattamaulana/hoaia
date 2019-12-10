@@ -12,4 +12,9 @@ class Donations extends Model
     protected $fillable = [
         'title', 'description', 'plant', 'money'
     ];
+
+    public function forest()
+    {
+        return $this->belongsTo('App\Models\Forests');
+    }
 }

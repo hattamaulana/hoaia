@@ -22,7 +22,10 @@
                         @csrf
 
                         <div class="form-group">
-                            <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <label for="your_name">
+                                <i class="zmdi zmdi-account material-icons-name"></i>
+                            </label>
+
                             <input id="email" type="email"
                                    class="@error('email') is-invalid @enderror"
                                    name="email" value="{{ old('email') }}" placeholder="Your EMail Address"
@@ -57,7 +60,7 @@
                             </label>
                         </div>
                         <div class="form-group form-button">
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-success">
                                 {{ __('Login') }}
                             </button>
                         </div>
