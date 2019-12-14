@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Forests;
 use Illuminate\Http\Request;
 
 class ForestController extends Controller
@@ -14,7 +15,9 @@ class ForestController extends Controller
      */
     public function index()
     {
-        return view( 'forest' );
+        $forest = Forests::all();
+        $param  = ['data' => $forest];
+        return view( 'forest', $param );
     }
 
     /**
@@ -46,7 +49,10 @@ class ForestController extends Controller
      */
     public function show($id)
     {
-        //
+        $forest = Forests::find($id);
+        $param = ['data' => $forest];
+
+        return view('forest-detail', $param);
     }
 
     /**

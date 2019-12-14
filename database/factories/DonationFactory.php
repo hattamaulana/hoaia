@@ -11,6 +11,7 @@ $factory->define(Donations::class, function (Faker $faker) {
 
     return [
         'title'         => $faker->sentence,
+        'imgurl'        => $faker->imageUrl($width = 640, $height = 480) ,
         'description'   => $faker->paragraph,
         'plant'         => $faker->randomDigit,
         'money'         => $faker->numberBetween($min = 10000, $max = 100000),

@@ -5,6 +5,8 @@
 @endsection
 
 @section('nav-link', 'nav-item-light')
+@section('title-banner', 'Hutan')
+@section('desc-banner', 'Telusuri Hutan di Dunia ini.')
 
 @section('content')
     @component('components.home-banner', ['shown' => 'parralax-banner'])
@@ -12,57 +14,33 @@
 
     @include( 'components.content.hutan-banner' )
 
-    <!--================Blog Area =================-->
     <section class="blog_area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="blog_left_sidebar">
-                        <article class="row blog_item">
-                            <div class="col-md-3">
-                                <div class="blog_info text-right">
-                                    <div class="post_tag"></div>
-                                    <ul class="blog_meta list">
-                                        <li><a href="#">12 Dec, 2017<i class="lnr lnr-calendar-full"></i></a></li>
-                                        <li><a href="#">1.2M Views<i class="lnr lnr-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="blog_post">
-                                    <img src="{{ asset( 'vendor/seelife/img/blog/main-blog/m-blog-1.jpg' ) }}" alt="">
-                                    <div class="blog_details">
-                                        <a href="single-blog.html"><h2>Astronomy Binoculars A Great Alternative</h2></a>
-                                        <p>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.</p>
-                                        <a href="single-blog.html" class="blog_btn">View More</a>
+                        @foreach($data as $i => $val)
+                            <article class="row blog_item">
+                                <div class="col-md-3">
+                                    <div class="blog_info text-right">
+                                        <div class="post_tag"></div>
+                                        <ul class="blog_meta list">
+                                            <li><a href="#">{{$val->created_at}}<i class="lnr lnr-calendar-full"></i></a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div>
-                        </article>
-
-                        <nav class="blog-pagination justify-content-center d-flex">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a href="#" class="page-link" aria-label="Previous">
-		                                    <span aria-hidden="true">
-		                                        <span class="lnr lnr-chevron-left"></span>
-		                                    </span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a href="#" class="page-link">01</a></li>
-                                <li class="page-item active"><a href="#" class="page-link">02</a></li>
-                                <li class="page-item"><a href="#" class="page-link">03</a></li>
-                                <li class="page-item"><a href="#" class="page-link">04</a></li>
-                                <li class="page-item"><a href="#" class="page-link">09</a></li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link" aria-label="Next">
-		                                    <span aria-hidden="true">
-		                                        <span class="lnr lnr-chevron-right"></span>
-		                                    </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                                <div class="col-md-9">
+                                    <div class="blog_post">
+                                        <img src="{{ asset('file_upload/'. $val->imgurl) }}" alt="">
+                                        <div class="blog_details">
+                                            <a href="{{ route('user.forest-detail', $val->id) }}"><h2>{{$val->name}}</h2></a>
+                                            <p>{{ $val->description }}</p>
+                                            <a href="{{ route('user.forest-detail', $val->id) }}" class="blog_btn">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        @endforeach
                     </div>
                 </div>
 
@@ -79,10 +57,6 @@
                         </aside>
 
                         <aside class="single-sidebar-widget newsletter_widget">
-                            <p>
-                                Here, I focus on a range of items and features that we use in life without
-                                giving them a second thought.
-                            </p>
                             <div class="form-group d-flex flex-row">
                                 <div class="input-group">
                                     <div class="input-group-prepend">

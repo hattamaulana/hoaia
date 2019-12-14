@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class VolunteerController extends Controller
@@ -14,7 +15,10 @@ class VolunteerController extends Controller
      */
     public function index()
     {
-        return view('admin.volunteer');
+        $user = User::where(['role' => 0, 'verify' => 0])->get();
+        $param = ['data' => $user];
+
+        return view('admin.volunteer', $param);
     }
 
     /**

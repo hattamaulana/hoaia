@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Transactions;
 use Illuminate\Http\Request;
 
 class EndowmentController extends Controller
@@ -14,7 +15,9 @@ class EndowmentController extends Controller
      */
     public function index()
     {
-        return view('admin.endowment');
+        $param = ['data' => Transactions::all()];
+
+        return view('admin.endowment', $param);
     }
 
     /**

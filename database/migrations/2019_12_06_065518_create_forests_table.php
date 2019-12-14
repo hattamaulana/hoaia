@@ -15,8 +15,9 @@ class CreateForestsTable extends Migration
     {
         Schema::create('forests', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('imgurl');
             $table->string('name')->unique();
-            $table->string('description');
+            $table->text('description');
             $table->string('country');
             $table->string('location');
             $table->integer('large');

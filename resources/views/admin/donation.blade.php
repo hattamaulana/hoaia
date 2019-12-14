@@ -34,32 +34,34 @@
                                     <th>#</th>
                                     <th>Nama Hutan</th>
                                     <th>Deskripsi</th>
-                                    <th>Target Benih Terkumpul</th>
-                                    <th>Target Uang Terkumpul</th>
+                                    <th>Target Benih</th>
+                                    <th>Target Uang</th>
                                     <th>Edit</th>
                                     <th>Hapus</th>
                                 </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Alas Purwo</td>
-                                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                <td>1000 Benih</td>
-                                <td>Rp 1.000.000.000</td>
-                                <td>
-                                    <a class="btn btn-tool bg-warning"
-                                       href="{{ route('admin.donation.edit', 1) }}">
-                                        <i class="fas fa-edit"></i>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="btn btn-tool bg-danger"
-                                       href="{{ route('admin.donation.destroy', 1) }}">
-                                        <i class="fas fa-minus"></i>
-                                    </a>
-                                </td>
-                            </tr>
+                                @foreach($data as $i => $val)
+                                    <tr>
+                                        <td>{{ ($i + 1) }}</td>
+                                        <td>{{ $val->title }}</td>
+                                        <td>{{ $val->description }}</td>
+                                        <td>{{ $val->plant }} Benih</td>
+                                        <td>Rp {{ $val->money }}</td>
+                                        <td>
+                                            <a class="btn btn-tool bg-warning"
+                                               href="{{ route('admin.donation.edit', 1) }}">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-tool bg-danger"
+                                               href="{{ route('admin.donation.destroy', 1) }}">
+                                                <i class="fas fa-minus"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

@@ -18,7 +18,7 @@
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link rel="icon" href="{{ asset( '/vendor/seelife/img/favicon.png' ) }}" type="image/png">
+        <link rel="icon" href="{{ asset( '/vendor/seelife/img/logo.png' ) }}" type="image/png">
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{{ asset( 'vendor/seelife/css/bootstrap.css' ) }}">

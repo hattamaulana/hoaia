@@ -42,36 +42,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>1.</td>
-                        <td>Alas Purwo</td>
-                        <td>
-                            <div class="progress progress-xs">
-                                <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                            </div>
-                        </td>
-                        <td><span class="badge bg-danger">55%</span></td>
-                    </tr>
-                    <tr>
-                        <td>2.</td>
-                        <td>Alas Caruban</td>
-                        <td>
-                            <div class="progress progress-xs">
-                                <div class="progress-bar bg-warning" style="width: 70%"></div>
-                            </div>
-                        </td>
-                        <td><span class="badge bg-warning">70%</span></td>
-                    </tr>
-                    <tr>
-                        <td>3.</td>
-                        <td>Hutan Pinus</td>
-                        <td>
-                            <div class="progress progress-xs progress-striped active">
-                                <div class="progress-bar bg-primary" style="width: 30%"></div>
-                            </div>
-                        </td>
-                        <td><span class="badge bg-primary">30%</span></td>
-                    </tr>
+                        @foreach($data['donations'] as $i => $donation)
+                            @php
+                                $donate = $donation->transactions->count();
+                                $percentase = $donate
+                            @endphp
+                            <tr>
+                                <td>{{ ($i + 1) }}.</td>
+                                <td>{{ $donation->title }}</td>
+                                <td>
+                                    <div class="progress progress-xs">
+                                        <div class="progress-bar progress-bar-success" style="width: {{ $percentase }}%"></div>
+                                    </div>
+                                </td>
+                                <td><span class="badge bg-success">{{ $percentase }}%</span></td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
@@ -97,13 +83,20 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
-                                </td>
-                                <td class="mailbox-date">5 mins ago</td>
-                            </tr>
+                                @foreach($data['messages'] as $i => $message)
+                                    <tr>
+                                        <td>{{ ($i + 1) }}</td>
+                                        <td class="mailbox-name">
+                                            <a href="{{ $message->id }}">
+                                                {{ $message->byUser->name }}
+                                            </a>
+                                        </td>
+                                        <td class="mailbox-subject">
+                                            {{ $message->subject }}
+                                        </td>
+                                        <td class="mailbox-date">{{ $message->created_at }}</td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                         <!-- /.table -->

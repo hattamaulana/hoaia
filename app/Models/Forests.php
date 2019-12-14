@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Forests extends Model
 {
-    //
+    protected $fillable = [
+        'name', 'description', 'location', 'country', 'large', 'imgurl'
+    ];
 
     public function donations()
     {

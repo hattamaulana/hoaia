@@ -15,9 +15,10 @@ class CreateDonationsTable extends Migration
     {
         Schema::create('donations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('forest_id');
+            $table->unsignedBigInteger('forest_id')->nullable();
+            $table->string('imgurl');
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->integer('plant');
             $table->integer('money');
             $table->timestamps();

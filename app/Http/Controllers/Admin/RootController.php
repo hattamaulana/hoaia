@@ -3,7 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Donations;
+use App\Models\Message;
+use App\Models\Transactions;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Symfony\Component\VarDumper\Caster\TraceStub;
 
 class RootController extends Controller
 {
@@ -14,7 +20,14 @@ class RootController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $donation = Donations::all();
+        $messages = Message::where('to_user_id', Auth::id())->get();
+        $param       = [ 'data' => [
+            'donations' => $donation,
+            'messages' => $messages
+        ]];
+
+        return view('admin.index', $param);
     }
 
     /**

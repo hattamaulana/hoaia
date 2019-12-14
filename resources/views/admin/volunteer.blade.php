@@ -36,24 +36,26 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mahatta Maulana</td>
-                                    <td>mahatta.maulana@gmail.com</td>
-                                    <td>10 September 2013</td>
-                                    <td>
-                                        <a class="btn btn-success"
-                                           href="">
-                                            Terima Sebagai Relawan
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a class="btn btn-danger"
-                                           href="">
-                                            Tolak Sebagai Relawan
-                                        </a>
-                                    </td>
-                                </tr>
+                                    @foreach($data as $i => $val)
+                                        <tr>
+                                            <td>{{ ($i+1) }}</td>
+                                            <td>{{ $val->name }}</td>
+                                            <td>{{ $val->email }}</td>
+                                            <td>{{ $val->updated_at }}</td>
+                                            <td>
+                                                <a class="btn btn-success"
+                                                   href="">
+                                                    Terima Sebagai Relawan
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-danger"
+                                                   href="">
+                                                    Tolak Sebagai Relawan
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

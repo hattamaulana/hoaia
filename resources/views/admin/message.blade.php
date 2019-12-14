@@ -29,23 +29,25 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="mailbox-name">
-                            <a href="{{ route('admin.message.detail', 1) }}"
-                               class="text-black-50">
-                                Alexander Pierce
-                            </a>
-                        </td>
+                        @foreach($data as $i => $val)
+                            <tr>
+                                <td>{{ ($i + 1) }}</td>
+                                <td class="mailbox-name">
+                                    <a href="{{ route('admin.message.detail', $val->id) }}"
+                                       class="text-black-50">
+                                        {{ $val->byUser->name }}
+                                    </a>
+                                </td>
 
-                        <td class="mailbox-subject">
-                            <a href="{{ route('admin.message.detail', 1) }}"
-                               class="text-black-50 ">
-                                AdminLTE 3.0 Issue- Trying to find a solution to this problem...
-                            </a>
-                        </td>
-                        <td class="mailbox-date">5 mins ago</td>
-                    </tr>
+                                <td class="mailbox-subject">
+                                    <a href="{{ route('admin.message.detail', $val->id) }}"
+                                       class="text-black-50 ">
+                                            {{ $val->subject }}
+                                    </a>
+                                </td>
+                                <td class="mailbox-date">5 mins ago</td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

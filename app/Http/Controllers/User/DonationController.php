@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Donations;
 use Illuminate\Http\Request;
 
 class DonationController extends Controller
@@ -14,7 +15,10 @@ class DonationController extends Controller
      */
     public function index()
     {
-        return view('donation');
+        $donation = Donations::all();
+        $param    = ['data' => $donation];
+
+        return view('donation', $param);
     }
 
     /**
@@ -46,7 +50,7 @@ class DonationController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('donate');
     }
 
     /**

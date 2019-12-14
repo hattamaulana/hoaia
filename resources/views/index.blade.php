@@ -25,19 +25,10 @@
                     <div class="col-lg-6 col-md-12 about_right">
                         <div class="about_content">
                             <h2>
-                                We are nonprofit team <br>
-                                and work worldwide
+                                Hoaia
                             </h2>
                             <p>
-                                Their multiply doesn't behold shall appear living heaven second
-                                roo lights. Itself hath thing for won't herb forth gathered good
-                                bear fowl kind give fly form winged for reason
-                            </p>
-                            <p>
-                                Land their given the seasons herb lights fowl beast whales it
-                                after multiply fifth under to it waters waters created heaven
-                                very fill agenc to. Dry creepeth subdue them kind night behold
-                                rule stars him grass waters our without
+                                Hoaia adalah situs donasi untuk reboisasi dengan cara donasi tunai atau pengiriman bibit tanaman langsung.
                             </p>
                         </div>
                     </div>

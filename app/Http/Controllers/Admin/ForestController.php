@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Forests;
 use Illuminate\Http\Request;
 
 class ForestController extends Controller
@@ -14,7 +15,10 @@ class ForestController extends Controller
      */
     public function index()
     {
-        return view('admin.forest');
+        $forests    = Forests::all();
+        $param      = ['data' => $forests];
+
+        return view('admin.forest', $param);
     }
 
     /**
@@ -35,7 +39,20 @@ class ForestController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $forest = new Forests();
+
+        $img = $request->file('imgurl');
+        $img->move('file_upload', $img->getClientOriginalName());
+
+        $forest->name = $request->name;
+        $forest->description = $request->description;
+        $forest->location = $request->location;
+        $forest->country = $request->country;
+        $forest->large = $request->large;
+        $forest->imgurl = $img->getClientOriginalName();
+
+        $forest->save();
+        return redirect(route('admin.forest'));
     }
 
     /**

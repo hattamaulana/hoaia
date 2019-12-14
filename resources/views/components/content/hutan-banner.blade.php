@@ -25,7 +25,7 @@
                     <h4>Menjadi Donatur</h4>
                     <img src="{{ asset( 'vendor/seelife/img/causes/c3.png' ) }}" alt="">
                     <p>
-                        Kamu telah ikut menyelamatkan Bumi dengan berdonasi di Hoaia
+                        Setiap donasi minimal 7 pohon atau uang sebesar Rp500.000 akan mendapatkan 1 kaos yang akan kami hubungi melalui email yang terdaftar
                     </p>
                 </div>
             </div>

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MessageController extends Controller
 {
@@ -14,7 +16,10 @@ class MessageController extends Controller
      */
     public function index()
     {
-        return view('admin.message');
+        $inbox = Message::where('to_user_id', Auth::id())->get();
+        $param = ['data' => $inbox];
+
+        return view('admin.message', $param);
     }
 
     /**

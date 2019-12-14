@@ -19,7 +19,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
-                                Data Request Menjadi Relawan
+                                Data Transaksi
                             </h3>
                         </div>
                         <!-- /.card-header -->
@@ -36,21 +36,27 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mahatta Maulana</td>
-                                    <td>mahatta.maulana@gmail.com</td>
-                                    <td>10 September 2013</td>
-                                    <td>
-                                        30 Benih
-                                    </td>
-                                    <td>
-                                        <a class="btn btn-success"
-                                           href="">
-                                            Konfirmasi
-                                        </a>
-                                    </td>
-                                </tr>
+                                    @foreach($data as $i => $val)
+                                        <tr>
+                                            <td>{{ ($i + 1) }}</td>
+                                            <td>{{ $val->user->name }}</td>
+                                            <td>{{ $val->user->email }}m</td>
+                                            <td>{{ $val->created_at }}</td>
+                                            <td>
+                                                @if($val->type == 'benih')
+                                                    {{ $val->endowment }} Benih
+                                                @else
+                                                    Rp {{ $val->endowment }}
+                                                @endif
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-success"
+                                                   href="">
+                                                    Konfirmasi
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

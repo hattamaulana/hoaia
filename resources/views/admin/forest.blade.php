@@ -39,23 +39,25 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Alas Purwo</td>
-                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                    <td>
-                                        <a class="btn btn-tool bg-warning"
-                                           href="{{ route('admin.forest.edit', 1) }}">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a class="btn btn-tool bg-danger"
-                                           href="{{ route('admin.forest.destroy', 1) }}">
-                                            <i class="fas fa-minus"></i>
-                                        </a>
-                                    </td>
-                                </tr>
+                                    @foreach($data as $key => $value)
+                                        <tr>
+                                            <td>{{ ($key + 1) }}</td>
+                                            <td>{{ $value->name }}</td>
+                                            <td>{{ $value->description }}</td>
+                                            <td>
+                                                <a class="btn btn-tool bg-warning"
+                                                   href="{{ route('admin.forest.edit', $value->id) }}">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-tool bg-danger"
+                                                   href="{{ route('admin.forest.destroy', $value->id) }}">
+                                                    <i class="fas fa-minus"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

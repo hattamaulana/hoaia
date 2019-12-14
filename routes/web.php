@@ -44,6 +44,7 @@ Route::group(['namespace' => 'User'], function () {
     Route::get('/donasi', 'DonationController@index')
         ->name('user.donation');
     Route::get('/donasi/{id}', 'DonationController@show')
+        ->middleware('auth')
         ->name('user.donation-detail');
 
     Route::get('/kontak', 'ContactController@index')
@@ -73,6 +74,8 @@ Route::group([
             ->name('admin.forest');
         Route::get('/hutan/add', 'ForestController@create')
             ->name('admin.forest.add');
+        Route::post('/hutan/new', 'ForestController@store')
+            ->name('admin.forest.new');
         Route::get('/hutan/edit/{id}', 'ForestController@edit')
             ->name('admin.forest.edit');
         Route::get('/hutan/hapus/{id}', 'ForestController@destroy')
@@ -88,6 +91,8 @@ Route::group([
             ->name('admin.donation');
         Route::get('/donation/add', 'DonationController@create')
             ->name('admin.donation.add');
+        Route::post('/donation/add/new', 'DonationController@store')
+            ->name('admin.donation.new');
         Route::get('/donation/edit/{id}', 'DonationController@edit')
             ->name('admin.donation.edit');
         Route::get('/donation/hapus/{id}', 'DonationController@edit')
