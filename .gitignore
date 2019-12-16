@@ -1,0 +1,8 @@
+# Directory
+# =========
+/vendor/
+
+# File
+# ====
+composer.lock
+/application/config/database.php
