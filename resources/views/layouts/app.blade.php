@@ -31,6 +31,9 @@
         <link rel="stylesheet" href="{{ asset( 'vendor/seelife/css/style.css' ) }}">
         <link rel="stylesheet" href="{{ asset( 'vendor/seelife/css/responsive.css' ) }}">
         <link rel="stylesheet" href="{{ asset( 'vendor/regform/css/style.css' ) }}">
+
+        <link rel="stylesheet"
+              href="{{ assert('vendor/regform/fonts/material-icon/css/material-design-iconic-font.min.css') }}">
     </head>
 
     <body>
