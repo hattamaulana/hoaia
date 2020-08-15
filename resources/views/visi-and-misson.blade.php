@@ -31,10 +31,9 @@
                                 Misi
                             </h2>
                             <p>
-                                1. Mewujudkan pencegahan kerusakan dan pengendalian pencemaran sumber daya alam       dan lingkungan hidup dalam rangka pelestarian fungsi lingkungan hidup
-                                <br>
+                                1. Mewujudkan pencegahan kerusakan dan pengendalian pencemaran sumber daya alam dan lingkungan hidup dalam rangka pelestarian fungsi lingkungan hidup <br>
                                 2. Membuat program Tanam Seribu Pohon <br>
-                                3. Membuat perubahan-perubahan kecil yang berdampak besar untuk Bumi tercintat
+                                3. Membuat perubahan-perubahan kecil yang berdampak besar untuk Bumi tercinta.
                             </p>
                         </div>
                     </div>

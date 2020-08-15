@@ -19,7 +19,9 @@
                 <div class="single_about row">
                     <div class="col-lg-6 col-md-12 text-center about_left">
                         <div class="about_thumb">
-                            <img src="{{ asset( 'vendor/seelife/img/about-img.jpg' ) }}" class="img-fluid" alt="">
+                            <img src="{{ asset( 'vendor/seelife/img/about-img.jpg' ) }}"
+                                class="img-fluid"
+                                alt="">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12 about_right">

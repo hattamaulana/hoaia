@@ -22,7 +22,7 @@ class RootController extends Controller
     {
         $donation = Donations::all();
         $messages = Message::where('to_user_id', Auth::id())->get();
-        $param       = [ 'data' => [
+        $param    = [ 'data' => [
             'donations' => $donation,
             'messages' => $messages
         ]];
